@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .contact-method {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .contact-method h2 {
+            margin: 0;
+            color: #007BFF;
+        }
+        .contact-method p {
+            color: #555;
+            margin: 10px 0;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 15px 30px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Discord Username Copied To Clipboard');
+            }).catch(err => {
+                console.error('Error copying to clipboard: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Me</h1>
+        
+        <div class="contact-method">
+            <h2>Email</h2>
+            <p>839709@pdsb.net</p>
+            <a href="mailto:839709@pdsb.net" class="button">Send Email</a>
+        </div>
+
+        <div class="contact-method">
+            <h2>Second Email</h2>
+            <p>thehunterru@gmail.com</p>
+            <a href="mailto:thehunterru@gmail.com" class="button">Call Me</a>
+        </div>
+
+        <div class="contact-method">
+            <h2>Discord</h2>
+            <p>My Discord Username</p>
+            <button class="button" onclick="copyToClipboard('@th3_hunt3r.')">Copy Discord Username</button>
+        </div>
+
+        <div class="contact-method">
+            <h2>GitHub</h2>
+            <p>My Github Url</p>
+            <a href="https://github.com/HUNT3RRU" class="button">View GitHub</a>
+        </div>
+
+        <div class="contact-method">
+            <h2>Not Yet</h2>
+            <p>Not Yet</p>
+            <a href="url" class="button"></a>
+        </div>
+    </div>
+
+</body>
+</html>
