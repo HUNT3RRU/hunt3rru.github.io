@@ -17,7 +17,6 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            text-align: center;
             color: white;
         }
         @keyframes gradient {
@@ -31,87 +30,87 @@
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             max-width: 600px;
-            width: 100%;
+            width: 90%;
+            text-align: center; /* Center text inside the box */
         }
         h1 {
             color: #333;
             margin-bottom: 20px;
         }
         .contact-method {
-            margin-bottom
-            .contact-method {
-                margin-bottom: 20px;
-                padding: 15px;
-                border: 1px solid #e0e0e0;
-                border-radius: 5px;
-                background-color: #f9f9f9;
-                color: black;
-            }
-            .contact-method h2 {
-                margin: 0;
-                color: #007BFF;
-            }
-            .button {
-                display: inline-block;
-                margin: 10px 0;
-                padding: 15px 30px;
-                color: white;
-                background-color: #007BFF;
-                border: none;
-                border-radius: 5px;
-                text-decoration: none;
-                font-size: 16px;
-                transition: background-color 0.3s ease;
-            }
-            .button:hover {
-                background-color: #0056b3;
-            }
-        </style>
-        <script>
-            function copyToClipboard(text) {
-                navigator.clipboard.writeText(text).then(() => {
-                    alert('LinkedIn URL copied to clipboard!');
-                }).catch(err => {
-                    console.error('Error copying to clipboard: ', err);
-                });
-            }
-        </script>
-    </head>
-    <body>
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: black;
+            text-align: center; /* Align text to the left */
+        }
+        .contact-method h2 {
+            margin: 0;
+            color: #007BFF;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 15px 30px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Discord Username Has Been Copied');
+            }).catch(err => {
+                console.error('Error copying to clipboard: ', err);
+            });
+        }
+    </script>
+</head>
+<body>
 
-        <div class="container">
-            <h1>Contact Me</h1>
-            
-            <div class="contact-method">
-                <h2>Email</h2>
-                <p>youremail@example.com</p>
-                <a href="mailto:youremail@example.com" class="button">Send Email</a>
-            </div>
-
-            <div class="contact-method">
-                <h2>Phone</h2>
-                <p>(123) 456-7890</p>
-                <a href="tel:+11234567890" class="button">Call Me</a>
-            </div>
-
-            <div class="contact-method">
-                <h2>LinkedIn</h2>
-                <p><a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-                <button class="button" onclick="copyToClipboard('https://linkedin.com/in/yourprofile')">Copy LinkedIn URL</button>
-            </div>
-
-            <div class="contact-method">
-                <h2>GitHub</h2>
-                <p><a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a></p>
-                <a href="https://github.com/yourprofile" class="button">View GitHub</a>
-            </div>
-
-            <div class="contact-method">
-                <h2>Twitter</h2>
-                <p><a href="https://twitter.com/yourprofile" target="_blank">twitter.com/yourprofile</a></p>
-                <a href="https://twitter.com/yourprofile" class="button">View Twitter</a>
-            </div>
+    <div class="container">
+        <h1>Contact Me</h1>
+        
+        <div class="contact-method">
+            <h2>Email</h2>
+            <p>My School email</p>
+            <a href="mailto:839709@pdsb.net" class="button">Email Me</a>
         </div>
 
-    </body>
+        <div class="contact-method">
+            <h2>Second Email</h2>
+            <p>Personal Email</p>
+            <a href="mailto:thehunterru@gmail.com" class="button">Email Me</a>
+        </div>
+
+        <div class="contact-method">
+            <h2>Discord Username</h2>
+            <p>My Discord Username</p>
+            <button class="button" onclick="copyToClipboard('@th3_hunt3r.')">Copy Discord Username</button>
+        </div>
+
+        <div class="contact-method">
+            <h2>GitHub</h2>
+            <p>My GitHub Page</p>
+            <a href="https://github.com/HUNT3RRU" class="button">View GitHub</a>
+        </div>
+
+        <div class="contact-method">
+            <h2>Nothing Yet</h2>
+            <p>Nothing Is Here Yet</p>
+            <a href="url" class="button"></a>
+        </div>
+    </div>
+
+</body>
 </html>
