@@ -9,16 +9,24 @@
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
-            background-color: #f0f4f8;
+            animation: gradient 15s ease infinite;
+            background: linear-gradient(45deg, #6a5acd, #8360c3, #6a5acd);
+            background-size: 400% 400%;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 100vh;
             text-align: center;
+            color: white;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .container {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -30,81 +38,80 @@
             margin-bottom: 20px;
         }
         .contact-method {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        .contact-method h2 {
-            margin: 0;
-            color: #007BFF;
-        }
-        .contact-method p {
-            color: #555;
-            margin: 10px 0;
-        }
-        .button {
-            display: inline-block;
-            margin: 10px 0;
-            padding: 15px 30px;
-            color: white;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-    <script>
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Discord Username Copied To Clipboard');
-            }).catch(err => {
-                console.error('Error copying to clipboard: ', err);
-            });
-        }
-    </script>
-</head>
-<body>
+            margin-bottom
+            .contact-method {
+                margin-bottom: 20px;
+                padding: 15px;
+                border: 1px solid #e0e0e0;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+                color: black;
+            }
+            .contact-method h2 {
+                margin: 0;
+                color: #007BFF;
+            }
+            .button {
+                display: inline-block;
+                margin: 10px 0;
+                padding: 15px 30px;
+                color: white;
+                background-color: #007BFF;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 16px;
+                transition: background-color 0.3s ease;
+            }
+            .button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+        <script>
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    alert('LinkedIn URL copied to clipboard!');
+                }).catch(err => {
+                    console.error('Error copying to clipboard: ', err);
+                });
+            }
+        </script>
+    </head>
+    <body>
 
-    <div class="container">
-        <h1>Contact Me</h1>
-        
-        <div class="contact-method">
-            <h2>Email</h2>
-            <p>839709@pdsb.net</p>
-            <a href="mailto:839709@pdsb.net" class="button">Email Me</a>
+        <div class="container">
+            <h1>Contact Me</h1>
+            
+            <div class="contact-method">
+                <h2>Email</h2>
+                <p>youremail@example.com</p>
+                <a href="mailto:youremail@example.com" class="button">Send Email</a>
+            </div>
+
+            <div class="contact-method">
+                <h2>Phone</h2>
+                <p>(123) 456-7890</p>
+                <a href="tel:+11234567890" class="button">Call Me</a>
+            </div>
+
+            <div class="contact-method">
+                <h2>LinkedIn</h2>
+                <p><a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+                <button class="button" onclick="copyToClipboard('https://linkedin.com/in/yourprofile')">Copy LinkedIn URL</button>
+            </div>
+
+            <div class="contact-method">
+                <h2>GitHub</h2>
+                <p><a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a></p>
+                <a href="https://github.com/yourprofile" class="button">View GitHub</a>
+            </div>
+
+            <div class="contact-method">
+                <h2>Twitter</h2>
+                <p><a href="https://twitter.com/yourprofile" target="_blank">twitter.com/yourprofile</a></p>
+                <a href="https://twitter.com/yourprofile" class="button">View Twitter</a>
+            </div>
         </div>
 
-        <div class="contact-method">
-            <h2>Second Email</h2>
-            <p>thehunterru@gmail.com</p>
-            <a href="mailto:thehunterru@gmail.com" class="button">Email Me</a>
-        </div>
-
-        <div class="contact-method">
-            <h2>Discord</h2>
-            <p>My Discord Username</p>
-            <button class="button" onclick="copyToClipboard('@th3_hunt3r.')">Copy Discord Username</button>
-        </div>
-
-        <div class="contact-method">
-            <h2>GitHub</h2>
-            <p>My GitHub Page</p>
-            <a href="https://github.com/HUNT3RRU" class="button">View GitHub</a>
-        </div>
-
-        <div class="contact-method">
-            <h2>Not Yet</h2>
-            <p>Not Yet</p>
-            <a href="url" class="button"></a>
-        </div>
-    </div>
-
-</body>
+    </body>
 </html>
