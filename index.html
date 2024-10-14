@@ -4,78 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
-            animation: gradient 15s ease infinite;
-            background: linear-gradient(45deg, #6a5acd, #8360c3, #6a5acd);
-            background-size: 400% 400%;
-            height: 100vh;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1b1b38;
+            color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            color: white;
+            height: 100vh;
+            padding: 20px;
         }
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+
         .container {
-            background-color: rgba(255, 255, 255, 0.8);
+            background: linear-gradient(145deg, #121232, #1e1e50);
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
             width: 100%;
+            text-align: center;
         }
+
+        .profile {
+            margin-bottom: 30px;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+        }
+
         h1 {
-            color: #333;
-            margin-bottom: 20px;
+            margin-top: 15px;
+            font-size: 2rem;
         }
-        p {
-            color: #555;
-            margin-bottom: 20px;
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #bbb;
         }
+
+        .content {
+            display: grid;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        /* Button styling */
         .button {
             display: inline-block;
-            margin: 10px 0;
-            padding: 15px 30px;
+            background-color: #4caf50;
             color: white;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
+            padding: 10px 20px;
+            margin-top: 15px;
             text-decoration: none;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
         }
+
         .button:hover {
-            background-color: #0056b3;
+            background-color: #45a049;
         }
-        img {
-            max-width: 100%;
-            border-radius: 50%;
-            margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <h1>About Me</h1>
-        <p>Hello! I'm Victor. I love Coding, Playing Video Games and thats it...</p>
-        <p>Feel free to explore the sections below to learn more about my work and interests!</p>
-        <p>Right now only the projects and contacts button is working</p>
-        <a href="projects.html" class="button">My Projects</a>
-        <a href="page2.html" class="button">My Skills</a>
-        <a href="page3.html" class="button">My Experience</a>
-        <a href="contacts.html" class="button">Contact Me</a>
-        <a href="page5.html" class="button">My Blog</a>
-    </div>
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>Your Name</h1>
+            <p class="tagline">I Am A Creator in [Field]</p>
+        </div>
 
+        <div class="content">
+            <div class="card">
+                <h2>About Me</h2>
+                <p>Hello! I'm Victor. I love Coding, Playing Video Games and thats it...
+Feel free to explore the sections below to learn more about my work and interests!.</p>
+            </div>
+
+            <div class="card">
+                <h2>Upcoming Projects</h2>
+                <p>Stay tuned for my new project launching in [Date]!</p>
+                <a href="projects.html" class="button">See Projects</a>
+            </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const comingSoon = document.querySelector('.coming-soon');
+            comingSoon.innerHTML = "Stay tuned for more!";
+        });
+    </script>
 </body>
 </html>
