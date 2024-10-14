@@ -3,104 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Projects</title>
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: 'Roboto', sans-serif;
-            animation: gradient 15s ease infinite;
-            background: linear-gradient(45deg, #6a5acd, #8360c3, #6a5acd);
-            background-size: 400% 400%;
-            height: 100vh;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1b1b38;
+            color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            color: white;
+            height: 100vh;
+            padding: 20px;
         }
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+
         .container {
-            background-color: rgba(255, 255, 255, 0.8);
+            background: linear-gradient(145deg, #121232, #1e1e50);
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            max-width: 1000px;
             width: 100%;
+            text-align: center;
         }
+
         h1 {
-            color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
         }
-        .project {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            color: black;
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
-        .project h2 {
-            margin: 0;
-            color: #007BFF;
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
         }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Button styling */
         .button {
             display: inline-block;
-            margin: 10px 0;
-            padding: 15px 30px;
+            background-color: #4caf50;
             color: white;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
+            padding: 10px 20px;
             text-decoration: none;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s;
         }
+
         .button:hover {
-            background-color: #0056b3;
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-
     <div class="container">
         <h1>My Projects</h1>
-        
-        <div class="project">
-            <h2>Settlement Project</h2>
-            <p>Its A School Project In Which We Had To Explain Types Of Settlements With A Picture Of Them</p>
-            <a href="settlements.html" class="button">View Project</a>
-        </div>
 
-        <div class="project">
-            <h2>Not Working Yet</h2>
-            <p></p>
-            <a href="project2-link.html" class="button">View Project</a>
-        </div>
+        <div class="projects">
+            <!-- Project 1 -->
+            <div class="card">
+                <h2>Settlement Slides</h2>
+                <p>This project is a project talking about types of settlements</p>
+                <a href="settlements.html" class="button">View Details</a>
+            </div>
 
-        <div class="project">
-            <h2>Not Working Yet</h2>
-            <p></p>
-            <a href="project3-link.html" class="button">View Project</a>
-        </div>
+            <!-- Project 2 -->
+            <div class="card">
+                <h2>Project 2 Title</h2>
+                <p>This project is focused on [Project 2 Purpose]. It includes [Technologies or Features].</p>
+                <a href="project2-details.html" class="button">View Details</a>
+            </div>
 
-        <div class="project">
-            <h2>Not Working Yet</h2>
-            <p></p>
-            <a href="project4-link.html" class="button">View Project</a>
-        </div>
+            <!-- Project 3 -->
+            <div class="card">
+                <h2>Project 3 Title</h2>
+                <p>[Project 3 Overview]. It is designed with [Technologies] and includes [Notable Features].</p>
+                <a href="project3-details.html" class="button">View Details</a>
+            </div>
 
-        <div class="project">
-            <h2>Not Working Yet</h2>
-            <p></p>
-            <a href="project5-link.html" class="button">View Project</a>
+            <!-- Project 4 -->
+            <div class="card">
+                <h2>Project 4 Title</h2>
+                <p>In Project 4, I worked on [Description of Project 4], using [Tools and Techniques].</p>
+                <a href="project4-details.html" class="button">View Details</a>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="card">
+                <h2>Project 5 Title</h2>
+                <p>This project covers [Project 5 Description]. I implemented [Technologies and Methods].</p>
+                <a href="project5-details.html" class="button">View Details</a>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="card">
+                <h2>Project 6 Title</h2>
+                <p>[Project 6 Overview]. The project uses [Technologies] and delivers [Results or Features].</p>
+                <a href="project6-details.html" class="button">View Details</a>
+            </div>
+
+
         </div>
     </div>
-
 </body>
 </html>
