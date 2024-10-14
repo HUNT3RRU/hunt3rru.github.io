@@ -6,65 +6,88 @@
     <title>Contact Me</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: 'Roboto', sans-serif;
-            animation: gradient 15s ease infinite;
-            background: linear-gradient(45deg, #6a5acd, #8360c3, #6a5acd);
-            background-size: 400% 400%;
-            height: 100vh;
+            background: linear-gradient(145deg, #121232, #1e1e50); /* Gradient background */
+            color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            color: white;
+            height: 100vh;
+            padding: 20px;
+            position: relative;
         }
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+
         .container {
-            background-color: rgba(255, 255, 255, 0.8);
+            background: rgba(19, 19, 45, 0.8);
             padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            width: 90%;
-            text-align: center; /* Center text inside the box */
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            width: 100%;
+            text-align: left;
         }
+
         h1 {
-            color: #333;
-            margin-bottom: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #fff;
         }
+
         .contact-method {
             margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            color: black;
-            text-align: center; /* Align text to the left */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: center;
         }
+
         .contact-method h2 {
-            margin: 0;
-            color: #007BFF;
+            color: #ff0077;
+            margin-bottom: 10px;
         }
+
+        .contact-method p {
+            margin-bottom: 15px;
+            color: #bbb;
+        }
+
         .button {
             display: inline-block;
-            margin-top: 10px;
-            padding: 15px 30px;
-            color: white;
             background-color: #007BFF;
-            border: none;
-            border-radius: 5px;
+            color: white;
+            padding: 10px 20px;
             text-decoration: none;
-            font-size: 16px;
+            border-radius: 5px;
+            font-size: 1rem;
             transition: background-color 0.3s ease;
         }
+
         .button:hover {
             background-color: #0056b3;
         }
+
+        .button-copy {
+            background-color: #ff0077;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .button-copy:hover {
+            background-color: #d50055;
+        }
+
     </style>
     <script>
         function copyToClipboard(text) {
@@ -96,7 +119,7 @@
         <div class="contact-method">
             <h2>Discord Username</h2>
             <p>My Discord Username</p>
-            <button class="button" onclick="copyToClipboard('@th3_hunt3r.')">Copy Discord Username</button>
+            <button class="button-copy" onclick="copyToClipboard('@th3_hunt3r.')">Copy Discord Username</button>
         </div>
 
         <div class="contact-method">
@@ -108,7 +131,7 @@
         <div class="contact-method">
             <h2>Nothing Yet</h2>
             <p>Nothing Is Here Yet</p>
-            <a href="url" class="button"></a>
+            <a href="url" class="button">Coming Soon</a>
         </div>
     </div>
 
