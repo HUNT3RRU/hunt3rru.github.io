@@ -516,7 +516,45 @@ print("Despite societal pressures, Olemaun learns that her strength comes from b
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
+				
+				width: SLConfig.deck.width,
+				height: SLConfig.deck.height,
+				margin: 0.05,
+				
+
 				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: SLConfig.deck.share_notes ? 'separate-page' : false,
+				slideNumber: SLConfig.deck.slide_number,
+				fragmentInURL: true,
+
+				autoSlide: SLConfig.deck.auto_slide_interval || 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				scrollActivationWidth: null,
+
+				rollingLinks: false,
+				center: SLConfig.deck.center || false,
+				shuffle: SLConfig.deck.shuffle || false,
+				loop: SLConfig.deck.should_loop || false,
+				rtl: SLConfig.deck.rtl || false,
+				navigationMode: SLConfig.deck.navigation_mode,
+
+				transition: SLConfig.deck.transition,
+				backgroundTransition: SLConfig.deck.background_transition,
+
+				pdfMaxPagesPerSlide: 1,
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealHighlight ]
+			});
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
