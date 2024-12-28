@@ -1,0 +1,56 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+    <div style="float: right; text-align: end;">
+	    <a href="/inbox/{{ address }}">
+	        ← Return to inbox</a>
+	    <br>
+        <a href="/inbox/{{ address }}/{{ uid }}/delete">
+            Delete Email</a>
+	    <br>
+        <a href="/inbox/{{ address }}/{{ uid }}/raw" target="_blank">
+            View Raw</a>
+	    <br>
+        <a href="/logout">
+            Logout</a>
+    </div>
+    <hr>
+	<div class="mail_body" style="padding-left:10%;">
+    <h1 style="text-align:left;">
+        {{ mail.subject }}
+        <span style="float:right; padding-right:10vw;" >
+            From: {{ mail.from.text }} at {{ mail.date| date }}
+        </span>
+    </p>
+    </div>
+    {% if mail.html %}
+    <div>
+
+        {# TODO: 
+            Find a better solution for this monstrocity.
+            Replaces clean html tag with styled one for readabbility. 
+            Realistically, the entire iFrame or even website itself might be vulnerable.
+            srcdoc='html' seems like a very, very unsafe method to me, unfortunately I havent found a better solution.
+        #}
+
+		<iframe sandbox="allow-popups allow-popups-to-escape-sandbox" csp="script-src 'none'" srcdoc='{{ mail.html|replace({'<html>': '<html style="color: white"'}) }}'></iframe>
+	</div>
+    {% elseif mail.textAsHtml %}
+    <div class="mail_body">
+        {{ mail.textAsHtml|raw }}
+	</div>
+    {% else %}
+        <div class="mail_body"></div>
+    {% endif %}
+    {% if mail.attachments %}
+    <div class="mail_attachments" >
+    <p>
+        {% for attachment in mail.attachments %}
+            <a href="/inbox/{{ address }}/{{ uid }}/{{ attachment.checksum }}"><u>📎 {{ attachment.filename }}</u></a>
+        {% endfor %}
+    </p>
+	</div>
+    {% endif %}
+
+{% endblock %}
