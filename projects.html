@@ -1,137 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
     <title>Projects</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1b1b38;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            background: linear-gradient(145deg, #121232, #1e1e50);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-            max-width: 1000px;
-            width: 100%;
-            text-align: center;
-        }
-
-        h1 {
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: left;
-        }
-
-        .card h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .card p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        /* Button styling */
-        .button {
-            display: inline-block;
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-
-        @media (max-width: 768px) {
-            .projects {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>My Projects</h1>
-
-        <div class="projects">
-            <!-- Project 1 -->
-            <div class="card">
-                <h2>Settlement Slides</h2>
-                <p>This project is a project talking about types of settlements</p>
-                <a href="settlements.html" class="button">View Slides</a>
+  </head>
+  <body>
+    <section class="project">
+      <div class="container">
+        <div class="content">
+          <div class="header">
+            <button data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">See All Projects <box-icon class="arrow" name='arrow-back'></box-icon></button>
+            <div class="title">
+              <h1 class="row-1" data-aos="fade-left" data-aos-duration="500" data-aos-delay="300"><hr> Recent</h1>
+              <H1 class="row-2" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">PROJECTS</H1>
             </div>
-
-            <!-- Project 2 -->
-            <div class="card">
-                <h2>Site And Situation</h2>
-                <p>We had to chose a city and explain the "Site And Situation Factors" about it</p>
-                <a href="site&situation.html" class="button">View Slides</a>
+          </div>
+          <div class="project-area" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <div class="projects">
+              <img src="assets/project-1.png" alt="project-1">
+              <div class="desc">
+                <h1>Novaspace</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni eveniet at voluptatibus ea et blanditiis, harum temporibus voluptas fuga dolore alias laudantium eligendi nihil.</p>
+              </div>
             </div>
-
-            <!-- Project 3 -->
-            <div class="card">
-                <h2>Fatty legs website</h2>
-                <p>This was a project that we had to do something about the book fatty legs, There were collages and podcasts you could do but i asked to make a website</p>
-                <a href="fatty-legs" class="button">View Details</a>
+            <div class="projects">
+              <img src="assets/project-2.png" alt="project-2">
+              <div class="desc">
+                <h1>Novaship</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni eveniet at voluptatibus ea et blanditiis, harum temporibus voluptas fuga dolore alias laudantium eligendi nihil.</p>
+              </div>
             </div>
-
-            <!-- Project 4 -->
-            <div class="card">
-                <h2>Project 4 Not Here Yet</h2>
-                <p></p>
-                <a href="project4-details.html" class="button">View Details</a>
+            <div class="projects">
+              <img src="assets/project-3.png" alt="project-3">
+              <div class="desc">
+                <h1>Novascentauri</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni eveniet at voluptatibus ea et blanditiis, harum temporibus voluptas fuga dolore alias laudantium eligendi nihil.</p>
+              </div>
             </div>
-
-            <!-- Project 5 -->
-            <div class="card">
-                <h2>Project 5 Not Here Yet</h2>
-                <p></p>
-                <a href="project5-details.html" class="button">View Details</a>
-            </div>
-
-            <!-- Project 6 -->
-            <div class="card">
-                <h2>Project 6 Not Here Yet</h2>
-                <p></p>
-                <a href="project6-details.html" class="button">View Details</a>
-            </div>
-
-
+          </div>
         </div>
-    </div>
-</body>
+      </div>
+    </section>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
