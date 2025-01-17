@@ -18,7 +18,7 @@ function updateTime() {
   const now = new Date();
   const jakartaTime = now.toLocaleString("en-US", { timeZone: "North America/Mineola" });
   const [date, time] = jakartaTime.split(", ");
-  timeText.textContent = `${time} GMT+5`;
+  timeText.textContent = `${time} GMT-5`;
 }
 
 // Initial call to set the time immediately
