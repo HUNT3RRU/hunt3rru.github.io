@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Preview images (local only)</title>
+  <style>body{font-family: Arial; padding:20px} img{max-width:300px; margin:10px}</style>
+</head>
+<body>
+  <h1>Preview images</h1>
+  <p>Select images to preview. This does NOT upload files to the site — it's for local preview only.</p>
+  <input id="files" type="file" accept="image/*" multiple>
+  <div id="previews"></div>
+  <script>
+    document.getElementById('files').addEventListener('change', function(e){
+      const previews = document.getElementById('previews');
+      previews.innerHTML = '';
+      Array.from(e.target.files).forEach(file => {
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(file);
+        img.alt = file.name;
+        previews.appendChild(img);
+      });
+    });
+  </script>
+</body>
+</html>
